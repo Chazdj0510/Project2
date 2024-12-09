@@ -25,43 +25,6 @@ Unlike many existing emergency communication systems, this application combines 
 ---
 
 ## Installation and Usage
-**Installation:**
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/Chazdj0510/Project2.git
-2. Navigate to the project directory:
-   ```bash
-   cd Project 2
-3. Install dependencies
-   1. **Python 3.x.**
-   2. **Flask**: A lightweight Python web framework
-   3. **Twilio SDK**
-      ```bash
-      pip install flask twilio
-   - Sign Up for Twilio
-     - Log in to your Twilio dashboard.
-     - Get your Account SID and Auth Token from the dashboard.
-     - Set up a Twilio phone number to send alerts.
-4. Test Your Server
-   - Replace `'your_twilio_account_sid'`, `'your_twilio_auth_token'`, and `'your_twilio_phone_number'` with your Twilio credentials.
-   - Run the server:
-     ```bash
-     python server.py
-   - Send a test POST request using Postman, cURL, or requests.
-
-  
-
-The project leverages the following tools and libraries:
-
-- **Frontend**: HTML5, CSS, JavaScript
-- **Backend**: Flask (Python)
-- **SMS Gateway**: Twilio
-- **Geolocation**: HTML5 Geolocation API
-- **Development Server**: Flask (local development)
----
-
-## 🛠️ **Setup Instructions**
-
 ### Prerequisites
 Before you can run the project locally, ensure you have:
 
@@ -76,7 +39,7 @@ Before you can run the project locally, ensure you have:
 1. Clone the repository:
    ```bash
    git clone <https://github.com/Chazdj0510/Project2>
-   cd EmergencyCommunicationSystem
+   cd Project2
 2. Install dependencies:
    ```bash
    pip install -r requirements.txt
@@ -87,3 +50,29 @@ Before you can run the project locally, ensure you have:
    ```bash
    python server.py
 5. Open the frontend: Navigate to http://127.0.0.1:5000 in your browser.
+
+### Usage
+1. Open the application in a web browser.
+2. Grant location permissions when prompted.
+3. Enter the recipient’s phone number and optional additional details about the emergency.
+4. Click Send Alert to transmit the SMS along with your geolocation.
+
+## Code Structure
+The project leverages the following tools and libraries:
+
+- **Frontend**: HTML5, CSS, JavaScript
+   - Handles user interactions and geolocation capture.
+- **Backend**: Flask (Python), Twilio, Geolocation API
+   - Processes SMS sending via Twilio and manages API endpoints.
+
+User Interface  
+   ↓  
+Frontend (HTML/JavaScript)  
+   ↓  
+API Request (Geolocation & Message)  
+   ↓  
+Backend (Node.js/Express.js)  
+   ↓  
+Twilio API (Send SMS)  
+
+---
