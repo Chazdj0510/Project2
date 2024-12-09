@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emergency Communication System</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+    }
+    h1 {
+      color: #333;
+    }
+    form {
+      max-width: 400px;
+      margin: 20px auto;
+      padding: 20px;
+      background: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+    input, textarea, button {
+      width: 100%;
+      margin: 10px 0;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+    button {
+      background: #007BFF;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+    .message {
+      margin-top: 20px;
+      color: green;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <h1>Emergency Communication System</h1>
+  <form id="alertForm">
+    <label for="phoneNumber">Phone Number:</label>
+    <input type="text" id="phoneNumber" placeholder="+1234567890" required>
+    
+    <label for="message">Message:</label>
+    <textarea id="message" rows="4" placeholder="Enter your alert message here" required></textarea>
+    
+    <button type="button" id="captureLocation">Capture Geolocation</button>
+    <div class="message" id="geoSuccess" style="display:none;">Geolocation Captured!</div>
+    <div class="error" id="geoError" style="display:none;">Unable to capture location.</div>
+
+    <button type="submit">Send Alert</button>
+  </form>
+
+  <div class="message" id="successMessage" style="display:none;">Alert sent successfully!</div>
+  <div class="error" id="errorMessage" style="display:none;">Failed to send alert. Please try again.</div>
+
+  <script>
+    let userLocation = null;
+
+    document.getElementById('captureLocation').addEventListener('click', () => {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+          (position) => {
+            userLocation = {
+              latitude: position.coords.latitude,
+              longitude: position.coords.longitude
+            };
+            document.getElementById('geoSuccess').style.display = 'block';
+            document.getElementById('geoError').style.display = 'none';
+          },
+          (error) => {
+            document.getElementById('geoError').style.display = 'block';
+            document.getElementById('geoSuccess').style.display = 'none';
+          }
+        );
+      } else {
+        alert("Geolocation is not supported by this browser.");
+      }
+    });
+
+    const form = document.getElementById('alertForm');
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      if (!userLocation) {
+        alert("Please capture your location before sending an alert.");
+        return;
+      }
+
+      const phoneNumber = document.getElementById('phoneNumber').value;
+      const message = document.getElementById('message').value;
+
+      try {
+        const response = await fetch('http://127.0.0.1:5000/send_alert', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            phone_number: phoneNumber,
+            message: message,
+            location: userLocation,
+          })
+        });
+
+        if (response.ok) {
+          document.getElementById('successMessage').style.display = 'block';
+        } else {
+          document.getElementById('errorMessage').style.display = 'block';
+        }
+      } catch (error) {
+        alert('Failed to communicate with server');
+      }
+    });
+  </script>
+</body>
+</html>
