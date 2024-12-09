@@ -68,19 +68,15 @@ The project leverages the following tools and libraries:
 | User Interface         |
 | :--------------------: |
 |   ↓                    |
-| :--------------------: |
 | Frontend (HTML/JavaScript) |
 | :--------------------: |
 |   ↓                    |
-| :--------------------: |
 | API Request (Geolocation & Message)  |
 | :--------------------: |
 |   ↓                    |
-| :--------------------: |
 | Backend (Node.js/Express.js)  |
 | :--------------------: |
 |   ↓                    |
-| :--------------------: |
 | Twilio API (Send SMS)  |
 
 ---
