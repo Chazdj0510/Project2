@@ -95,10 +95,11 @@ The frontend captures user input and location data, sends it to the backend API,
 ---
 
 ## Achievement of Project Goals
-Backend Server:
+### Backend Server:
 ![image](https://github.com/user-attachments/assets/bf5c748e-4ceb-4565-8cac-21a263d880ce)
 ![image](https://github.com/user-attachments/assets/023d6f3e-5f40-4cd6-a534-a953f70b3e5e)
-![image](https://github.com/user-attachments/assets/0a83b622-030b-4adb-8199-24b6bb5aa678)
+
+### Frontend:
 ![image](https://github.com/user-attachments/assets/d2cb4486-88bd-4008-a8d2-0de07379e2a0)
 ![image](https://github.com/user-attachments/assets/8fafcc77-5f26-454f-860f-8d8bc9ecab07)
 
