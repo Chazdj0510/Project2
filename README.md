@@ -42,7 +42,7 @@ Before you can run the project locally, ensure you have:
    cd Project2
 2. Install dependencies:
    ```bash
-   pip install -r requirements.txt
+   pip install flask twilio
 3. Set Twilio credentials in the server: Replace placeholders with your Twilio `Account SID`, `Auth Token`, and Twilio phone number:
    ```python
    client = Client("YOUR_TWILIO_ACCOUNT_SID", "YOUR_TWILIO_AUTH_TOKEN")
