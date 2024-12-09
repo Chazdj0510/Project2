@@ -72,7 +72,7 @@ The project leverages the following tools and libraries:
 |   ↓                                  |
 | API Request (Geolocation & Message)  |
 |   ↓                    |
-| Backend (Node.js/Express.js)  |
+| Backend   |
 |   ↓                    |
 | Twilio API (Send SMS)  |
 
