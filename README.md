@@ -65,14 +65,22 @@ The project leverages the following tools and libraries:
 - **Backend**: Flask (Python), Twilio, Geolocation API
    - Processes SMS sending via Twilio and manages API endpoints.
 
-| User Interface  
-   ↓  
-| Frontend (HTML/JavaScript)  
-   ↓  
-| API Request (Geolocation & Message)  
-   ↓  
-| Backend (Node.js/Express.js)  
-   ↓  
-| Twilio API (Send SMS)  
+| User Interface         |
+| :--------------------: |
+|   ↓                    |
+| :--------------------: |
+| Frontend (HTML/JavaScript) |
+| :--------------------: |
+|   ↓                    |
+| :--------------------: |
+| API Request (Geolocation & Message)  |
+| :--------------------: |
+|   ↓                    |
+| :--------------------: |
+| Backend (Node.js/Express.js)  |
+| :--------------------: |
+|   ↓                    |
+| :--------------------: |
+| Twilio API (Send SMS)  |
 
 ---
