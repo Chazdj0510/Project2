@@ -78,11 +78,26 @@ The project leverages the following tools and libraries:
 
 **Explanation:**
 The frontend captures user input and location data, sends it to the backend API, which then communicates with Twilio to dispatch the alert.
+
 ---
 
 ## List of Functionalities and Verification Results
-**Functionalities**:
+**Functionalities:**
 1. SMS Alert System using Twilio API.
 2. Geolocation capture with HTML5 API.
 3. Minimalistic UI for quick usage.
 4. Logging of sent messages for verification.
+
+**Testing Results:**
+- Functionality: Successful SMS transmission with accurate geolocation.
+- Error Handling: Identified and resolved invalid phone number and location access denial issues.
+
+---
+
+## Achievement of Project Goals
+Backend Server:
+![image](https://github.com/user-attachments/assets/bf5c748e-4ceb-4565-8cac-21a263d880ce)
+![image](https://github.com/user-attachments/assets/023d6f3e-5f40-4cd6-a534-a953f70b3e5e)
+
+## Discussion and Conclusions
+
