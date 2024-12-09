@@ -7,9 +7,9 @@ app = Flask(__name__)
 CORS(app)
 
 # Twilio credentials
-TWILIO_ACCOUNT_SID = 'put account sid'
-TWILIO_AUTH_TOKEN = 'put authentication token'
-TWILIO_PHONE_NUMBER = 'insert twilio phone number'
+TWILIO_ACCOUNT_SID = 'your_account_sid_here'
+TWILIO_AUTH_TOKEN = 'your_auth_token_here'
+TWILIO_PHONE_NUMBER = '+1234567890'
 
 # Set up Twilio client
 client = Client(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN)
