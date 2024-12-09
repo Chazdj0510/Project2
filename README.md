@@ -76,4 +76,13 @@ The project leverages the following tools and libraries:
 |   ↓                    |
 | Twilio API (Send SMS)  |
 
+**Explanation:**
+The frontend captures user input and location data, sends it to the backend API, which then communicates with Twilio to dispatch the alert.
 ---
+
+## List of Functionalities and Verification Results
+**Functionalities**:
+1. SMS Alert System using Twilio API.
+2. Geolocation capture with HTML5 API.
+3. Minimalistic UI for quick usage.
+4. Logging of sent messages for verification.
