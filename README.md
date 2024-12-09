@@ -95,6 +95,10 @@ The frontend captures user input and location data, sends it to the backend API,
 ---
 
 ## Achievement of Project Goals
+- Successfully integrated Twilio for real-time SMS communication.
+- Demonstrated geolocation capture on desktop browsers.
+- Achieved seamless interaction between frontend and backend, ensuring reliability.
+  
 ### Backend Server:
 ![image](https://github.com/user-attachments/assets/bf5c748e-4ceb-4565-8cac-21a263d880ce)
 ![image](https://github.com/user-attachments/assets/023d6f3e-5f40-4cd6-a534-a953f70b3e5e)
